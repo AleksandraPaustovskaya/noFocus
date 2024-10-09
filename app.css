@@ -1,1 +1,72 @@
+@font-face {
+    font-family: 'IBM Plex Mono';
+    font-weight: 400;
+    src: url('./fonts/IBMPlexMoo-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'IBM Plex Mono';
+    font-weight: 700;
+    src: url('./fonts/IBMPlexMono-Bold.ttf');
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: center;
+
+}
+
+.navigation li {
+   list-style-type: none;
+   flex-direction: row;
+
+
+}
+
+.navigation li a{
+    text-decoration: none;
+    color: #353430;
+    font-family: 'IBM Plex Mono';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    padding: 0 13px;
+}
+
+.activeLink {
+    border: 1px solid #FF0070;
+}
+.header {
+    color: #FFC2E6;
+    text-shadow: 4px 4px 0px #FF0070;
+    font-family: 'IBM Plex Mono';
+    font-size: 157px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 82.5%;
+}
+
+.about {
+    display: flex;
+    background-color: #FF8DCB;
+    color: #353430;
+    width: 491px;
+    height: 71px;
+
+
+    font-family: 'IBM Plex Mono';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23.4px;
+
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+a {
+    justify-content: right;
+
+}
 
