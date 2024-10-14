@@ -3,27 +3,35 @@
     font-weight: 400;
     src: url('./fonts/IBMPlexMoo-Regular.ttf');
 }
-
 @font-face {
     font-family: 'IBM Plex Mono';
     font-weight: 700;
     src: url('./fonts/IBMPlexMono-Bold.ttf');
 }
 
+.back {
+    background-image:image-set('./backImg/1024.png');
+    /*url(https://s3-alpha-sig.figma.com/img/6caf/466a/db21dcdfb58c079b844f4727edded6f5?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WZHisDMThyq2STpYdtuYKyWP-NZ1co5Fjm~ascLJnhiK9oye7su5youlPL9Wk-Ix9yrWbT0U6bKtnAz8~ulkZRVvNrxK~8d~rwygA9rCLhPm4~MBTQ3VB9sL4V8RojmDtliX0aQMQnCwYvtVvj89FF6ZXcCmTzxEBxMQC8XN621Ht6xnBW09lN24ZHzl~UOg49mzDz2A4Ec~aq6~cmFzZik4rnb6tnRYM3jihoaPwqggx-6rZVDMu6CKLRWNeq6YsyRttAFNnkNLjmTDOjP7ehV3sns3rJwCUFRCUmGKOhYzYPF3kmwNoZU~0fRGtn2kkSGNH7Av6sYE8vbOlsp-Zw__)*/
+    width: 1024px;
+    height: 768px;
+}
+.main {
+    display: flex;
+
+    flex-direction: column;
+}
 
 .navigation {
     display: flex;
     justify-content: center;
-
+    align-items: flex-start;
 }
-
 .navigation li {
    list-style-type: none;
    flex-direction: row;
 
 
 }
-
 .navigation li a{
     text-decoration: none;
     color: #353430;
@@ -34,11 +42,17 @@
     line-height: 18px;
     padding: 0 13px;
 }
-
 .activeLink {
     border: 1px solid #FF0070;
 }
+
+
 .header {
+    flex-grow: 1;
+    align-content: center;
+}
+
+.header h1 {
     color: #FFC2E6;
     text-shadow: 4px 4px 0px #FF0070;
     font-family: 'IBM Plex Mono';
@@ -48,25 +62,44 @@
     line-height: 82.5%;
 }
 
+
+ .location {
+   flex-grow: 1;
+    justify-content: flex-end;
+
+}
+
+
 .about {
     display: flex;
-    background-color: #FF8DCB;
-    color: #353430;
+    flex-direction: column;
+   
+
     width: 491px;
     height: 71px;
-
-
+}
+.about p {
+    background-color: #FF8DCB;
+    color: #353430;
     font-family: 'IBM Plex Mono';
     font-weight: 700;
     font-size: 18px;
     line-height: 23.4px;
+}
 
-    align-items: flex-end;
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.column {
+    display: flex;
     flex-direction: column;
 }
 
-a {
-    justify-content: right;
-
+.finish {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
