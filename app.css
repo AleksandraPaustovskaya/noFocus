@@ -10,29 +10,34 @@
 }
 
 .back {
-    background-image:image-set('./backImg/1024.png');
-    /*url(https://s3-alpha-sig.figma.com/img/6caf/466a/db21dcdfb58c079b844f4727edded6f5?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WZHisDMThyq2STpYdtuYKyWP-NZ1co5Fjm~ascLJnhiK9oye7su5youlPL9Wk-Ix9yrWbT0U6bKtnAz8~ulkZRVvNrxK~8d~rwygA9rCLhPm4~MBTQ3VB9sL4V8RojmDtliX0aQMQnCwYvtVvj89FF6ZXcCmTzxEBxMQC8XN621Ht6xnBW09lN24ZHzl~UOg49mzDz2A4Ec~aq6~cmFzZik4rnb6tnRYM3jihoaPwqggx-6rZVDMu6CKLRWNeq6YsyRttAFNnkNLjmTDOjP7ehV3sns3rJwCUFRCUmGKOhYzYPF3kmwNoZU~0fRGtn2kkSGNH7Av6sYE8vbOlsp-Zw__)*/
+    background-image:url(https://s3-alpha-sig.figma.com/img/6caf/466a/db21dcdfb58c079b844f4727edded6f5?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WZHisDMThyq2STpYdtuYKyWP-NZ1co5Fjm~ascLJnhiK9oye7su5youlPL9Wk-Ix9yrWbT0U6bKtnAz8~ulkZRVvNrxK~8d~rwygA9rCLhPm4~MBTQ3VB9sL4V8RojmDtliX0aQMQnCwYvtVvj89FF6ZXcCmTzxEBxMQC8XN621Ht6xnBW09lN24ZHzl~UOg49mzDz2A4Ec~aq6~cmFzZik4rnb6tnRYM3jihoaPwqggx-6rZVDMu6CKLRWNeq6YsyRttAFNnkNLjmTDOjP7ehV3sns3rJwCUFRCUmGKOhYzYPF3kmwNoZU~0fRGtn2kkSGNH7Av6sYE8vbOlsp-Zw__);
+    background-size:cover;
+    width: 1024px;
+    height: 768px;
+    padding: 0 0;
+    margin: 0 0;
+
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
     width: 1024px;
     height: 768px;
 }
-.main {
-    display: flex;
-
-    flex-direction: column;
-}
-
 .navigation {
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
-.navigation li {
-   list-style-type: none;
-   flex-direction: row;
+button {
+    list-style-type: none;
+    flex-direction: row;
+    background: none;
+    border: 0;
 
-
-}
-.navigation li a{
     text-decoration: none;
     color: #353430;
     font-family: 'IBM Plex Mono';
@@ -43,16 +48,14 @@
     padding: 0 13px;
 }
 .activeLink {
-    border: 1px solid #FF0070;
+    border: 1px solid #353430;
 }
-
-
 .header {
-    flex-grow: 1;
-    align-content: center;
-}
+    position: absolute;
+    top:calc(50% - 130px / 2);
 
-.header h1 {
+    
+
     color: #FFC2E6;
     text-shadow: 4px 4px 0px #FF0070;
     font-family: 'IBM Plex Mono';
@@ -60,42 +63,124 @@
     font-style: normal;
     font-weight: 700;
     line-height: 82.5%;
-}
-
-
- .location {
-   flex-grow: 1;
-    justify-content: flex-end;
 
 }
-
-
-.about {
-    display: flex;
-    flex-direction: column;
-   
-
-    width: 491px;
-    height: 71px;
-}
-.about p {
+p {
     background-color: #FF8DCB;
+
     color: #353430;
     font-family: 'IBM Plex Mono';
     font-weight: 700;
     font-size: 18px;
     line-height: 23.4px;
+    
 }
 
+h2 {
+    
+    font-family: 'IBM Plex Mono';
+    font-weight: 700px;
+    font-size: 18px;
+    line-height: 23.4px;
+    color: #353430;
+}
+
+
+
+
+span {
+    /* Как концентрация может снижаться из-за… концентрации? Любая стрессовая ситуация (и резко меняющийся мир в целом) заставляет наш мозг постоянно «сканировать» окружающую среду на предмет опасности. Например, читать новости вместо работы. Но быть собранными всё время — невозможно. Концентрация — мышца, и она может не выдержать, если не давать ей отдохнуть. */
+    font-family: 'IBM Plex Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+
+    color: #353430;
+}
+
+.normal {
+    font-weight: 400;
+    
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.struct {
+    display: flex;
+    flex-direction: column;
+    width: 491px;
+    height: 71px;
+}
+.struct p {
+    position: absolute;
+    left: 513px;
+    top: 563px;
+
+}
 .row {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
-
 .column {
     display: flex;
     flex-direction: column;
+}
+.selfHi {
+    height: 1091px;
+}
+.grid4x3 {
+    display: grid;
+    grid-template-columns: repeat(4 315px);
+    grid-template-rows: repeat(4 315px);
+    grid-gap: 18px;
+    height: 1091px;
+    width: 984px;
+}
+.gridSunrice {
+    width: 649px;
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+
+    object-fit: cover;
+
+}
+.gridSweet {
+    height: 595px;
+    width: 315px;
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+
+    object-fit: cover;
+
+}
+.gridMusic {
+    width: 315px;
+    height: 768px;
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+
+    object-fit: cover;
+
+}
+.gridBooks {
+    width: 315px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    object-fit: cover;
+}
+.gridStreet {
+    width: 649px;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+
+    object-fit: cover;
 }
 
 .finish {
