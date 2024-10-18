@@ -25,38 +25,28 @@
     left: 20px;
     right: 20px;
 }
+.body{
+    background: #FFF1F7;
+    gap: 0;
+}
 
+.back {
+    background-image:url(https://s3-alpha-sig.figma.com/img/6caf/466a/db21dcdfb58c079b844f4727edded6f5?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WZHisDMThyq2STpYdtuYKyWP-NZ1co5Fjm~ascLJnhiK9oye7su5youlPL9Wk-Ix9yrWbT0U6bKtnAz8~ulkZRVvNrxK~8d~rwygA9rCLhPm4~MBTQ3VB9sL4V8RojmDtliX0aQMQnCwYvtVvj89FF6ZXcCmTzxEBxMQC8XN621Ht6xnBW09lN24ZHzl~UOg49mzDz2A4Ec~aq6~cmFzZik4rnb6tnRYM3jihoaPwqggx-6rZVDMu6CKLRWNeq6YsyRttAFNnkNLjmTDOjP7ehV3sns3rJwCUFRCUmGKOhYzYPF3kmwNoZU~0fRGtn2kkSGNH7Av6sYE8vbOlsp-Zw__);
+    width: 1024px;
+    height: 768px;
+    padding: 0 0;
+    margin: 0 0;
 
+    object-fit: fill;
+}
 /*Титульник*/
     /*фон*/
     /* Header */
 /* Header */
 
-
-
-    .back {
-        background-image:url(https://s3-alpha-sig.figma.com/img/6caf/466a/db21dcdfb58c079b844f4727edded6f5?Expires=1729468800&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WZHisDMThyq2STpYdtuYKyWP-NZ1co5Fjm~ascLJnhiK9oye7su5youlPL9Wk-Ix9yrWbT0U6bKtnAz8~ulkZRVvNrxK~8d~rwygA9rCLhPm4~MBTQ3VB9sL4V8RojmDtliX0aQMQnCwYvtVvj89FF6ZXcCmTzxEBxMQC8XN621Ht6xnBW09lN24ZHzl~UOg49mzDz2A4Ec~aq6~cmFzZik4rnb6tnRYM3jihoaPwqggx-6rZVDMu6CKLRWNeq6YsyRttAFNnkNLjmTDOjP7ehV3sns3rJwCUFRCUmGKOhYzYPF3kmwNoZU~0fRGtn2kkSGNH7Av6sYE8vbOlsp-Zw__);
-        background-size:;
-        width: 1024px;
-        height: 768px;
-        padding: 0 0;
-        margin: 0 0;
-    
-    }
     .main {
         display: flex;
         flex-direction: column;
-        /* Group */
-    
-    border-width: 1px 1px 0px 0px;
-    border-style: solid;
-    border-color: #353430;
-    
-    
-    /* Rectangle 79 */
-    
-    
-    
     }
     /*кнопки*/
     .navigation {
@@ -89,12 +79,9 @@
 
     .noFocus {
         position: absolute;
-        top: 319px;
+        top: 220px;
     }
     .header {
-
-    
-
         color: #FFC2E6;
         text-shadow: 4px 4px 0px #FF0070;
         font-family: 'IBM Plex Mono';
@@ -102,32 +89,50 @@
         font-style: normal;
         font-weight: 700;
         line-height: 82.5%;
-    
     }
     /*О чем*/
-    p {
+    .struct {
         position: absolute;
         top: 563px;
-        left: 513px;
-
-
+        left: 513px;     
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+    p {
         background-color: #FF8DCB;
 
         color: #353430;
         font-family: 'IBM Plex Mono';
         font-weight: 700;
         font-size: 18px;
-        line-height: 23.4px;
         align-content: flex-start;
+        margin: 0;
     }
 /*Тело*/
+.content {
+    position: absolute;
+    width: 1024px;
+    height: 3352px;
+    top: 828px;
+    background-color: #FFF1F7;
+}
     /* Почему?
-    
+        
         строка->столбец(2)*/
+        .page1 {
+            display: flex;
+        }
         .why {
+            flex-grow: 1;
             width: 314.96px;
             left: 20px;
         }
+        .multyTask {
+            flex-grow: 2;
+        }
+
         h2 {
             font-family: 'IBM Plex Mono';
             font-weight: 700px;
@@ -149,11 +154,7 @@
             font-weight: 400;
         
         }
-        .about {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
+
         .struct {
            
             width: 491px;
@@ -169,11 +170,20 @@
         строка->cтолбец(6)*/
 
 /*В картинках*/
-
+.inImg {
+    width: Fixed (1,024px)px;
+    height: Hug (1,091px)px;
+    top: 3089px;
+    padding: 0 20px 0 20px;
+    gap: 0;
+    opacity: 1;
+    
+}
 .grid4x3 {
+
     display: grid;
-    grid-template-columns: repeat(4 1fr);
-    grid-template-rows: repeat(4 1fr);
+    grid-template-columns: repeat(4 315px);
+    grid-template-rows: repeat(4 315px);
     grid-gap: 18px;
     height: 1091px;
     width: 984px;
@@ -224,7 +234,13 @@
 
 
 .finish {
+    position: absolute;
+    top: 4240px;
+    width: 1024px;
+    height: 768px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FFF1F7;
+
 }
